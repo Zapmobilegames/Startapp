@@ -1,0 +1,6 @@
+#include <s3eTypes.h>
+
+functions:
+
+
+s3eResult initSDK(const char* DEVID, const char* APPID) S3E_RESULT_ERROR run_on_os_thread
