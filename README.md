@@ -12,6 +12,7 @@ if(startappAvailable())
 {
 
 // DEVID: 00000000000, APPID: 11111111111 [Put your ID's]
+
 initSDK("00000000000", "11111111111");
 
 }
