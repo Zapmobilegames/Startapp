@@ -17,5 +17,6 @@ initSDK("00000000000", "11111111111");
 
 }
 
+If you want to know how to build your extension, follow the instructions at this link: http://www.microsofttranslator.com/bv.aspx?from=&to=en&a=http://habrahabr.ru/post/124077/
 
 When asking for their SDK, don't forget to tell that Zapmobilegames referred them to you, you could receive an entry bonus.
