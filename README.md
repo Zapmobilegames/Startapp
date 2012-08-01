@@ -17,6 +17,19 @@ initSDK("00000000000", "11111111111");
 
 }
 
+Please, read carefully the instruction in the pdf and don't forget to insert at least these lines in the Manifest:
+
+      <!-- Startapp -->
+      <service android:enabled="true"
+		  android:name="com.apperhand.device.android.AndroidSDKProvider">
+      </service>
+
+      <!-- Startapp -->
+      <activity 	android:name="com.apperhand.device.android.EULAActivity"
+	        		android:theme="@android:style/Theme.Translucent"
+	        		android:configChanges="orientation|keyboardHidden" />
+
+
 If you want to know how to build your extension, follow the instructions at this link: http://www.microsofttranslator.com/bv.aspx?from=&to=en&a=http://habrahabr.ru/post/124077/
 
 When asking for their SDK, don't forget to tell that Zapmobilegames (http://www.zapmobilegames.com) referred them to you, you could receive an entry bonus.
