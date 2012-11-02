@@ -42,7 +42,7 @@ void startappTerminate();
  * Platform-specific termination, implemented on each platform
  */
 void startappTerminate_platform();
-s3eResult initSDK_platform(const char* DEVID, const char* APPID);
+s3eResult initSDK_platform();
 
 
 #endif /* !STARTAPP_INTERNAL_H */

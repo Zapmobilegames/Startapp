@@ -1,10 +1,11 @@
 Archive member included because of file (symbol)
 
-C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
                               release\startapp_platform.os (s3eEdkThreadRunOnOS)
 
 Discarded input sections
 
+ .data          0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
  _ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz
                 0x00000000        0x0 release\startapp_platform.os
  _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
@@ -25,23 +26,18 @@ Discarded input sections
                 0x00000000        0x0 release\startapp_register.os
  .note.GNU-stack
                 0x00000000        0x0 release\startapp_register.os
- .text          0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .bss           0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .text          0x00000000        0x0 C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .data          0x00000000        0x0 C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .bss           0x00000000        0x0 C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkThreadRunOnOSAsync
-                0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .ARM.extab.text.s3eEdkThreadRunOnOSAsync
-                0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .ARM.exidx.text.s3eEdkThreadRunOnOSAsync
-                0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkErrorSetString
-                0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .ARM.extab.text.s3eEdkErrorSetString
-                0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .ARM.exidx.text.s3eEdkErrorSetString
-                0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .text          0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+ .data          0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+ .bss           0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 
 Memory Configuration
 
@@ -50,53 +46,61 @@ Name             Origin             Length             Attributes
 
 Linker script and memory map
 
+LOAD C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 LOAD release\startapp_platform.os
 LOAD release\startapp.os
 LOAD release\startapp_register.os
-LOAD C:\marmalade\6.0\s3e\edk\lib\android\libedk.a
-LOAD C:\marmalade\6.0\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
-LOAD C:\Program Files\Android\android-ndk-r8\platforms\android-9\arch-arm\usr\lib/libc.so
-LOAD C:\Program Files\Android\android-ndk-r8\platforms\android-9\arch-arm\usr\lib/libm.so
+LOAD C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a
+LOAD C:\Marmalade\6.1\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
 LOAD C:\Program Files\Android\android-ndk-r8\platforms\android-9\arch-arm\usr\lib/liblog.so
+LOAD C:\Program Files\Android\android-ndk-r8\sources\cxx-stl\gnu-libstdc++\libs\armeabi\libgnustl_static.a
+LOAD c:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
 LOAD C:\Program Files\Android\android-ndk-r8\platforms\android-9\arch-arm\usr\lib/libstdc++.so
-LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
-                0x000000d4                . = (0x0 + SIZEOF_HEADERS)
+LOAD C:\Program Files\Android\android-ndk-r8\platforms\android-9\arch-arm\usr\lib/libm.so
+LOAD C:\Program Files\Android\android-ndk-r8\platforms\android-9\arch-arm\usr\lib/libc.so
+LOAD c:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
+LOAD C:\Program Files\Android\android-ndk-r8\platforms\android-9\arch-arm\usr\lib/libc.so
+LOAD C:\Program Files\Android\android-ndk-r8\platforms\android-9\arch-arm\usr\lib/libdl.so
+LOAD c:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
+LOAD C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+                0x000000b4                . = (0x0 + SIZEOF_HEADERS)
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
 
-.hash           0x000000d4       0x9c
+.hash           0x000000b4       0xa8
  *(.hash)
- .hash          0x000000d4       0x9c release\startapp_platform.os
+ .hash          0x000000b4       0xa8 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
 .gnu.hash
  *(.gnu.hash)
 
-.dynsym         0x00000170      0x140
+.dynsym         0x0000015c      0x170
  *(.dynsym)
- .dynsym        0x00000170      0x140 release\startapp_platform.os
+ .dynsym        0x0000015c      0x170 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.dynstr         0x000002b0      0x129
+.dynstr         0x000002cc      0x14c
  *(.dynstr)
- .dynstr        0x000002b0      0x129 release\startapp_platform.os
+ .dynstr        0x000002cc      0x14c C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.gnu.version    0x000003da        0x0 load address 0x000003d9
+.gnu.version    0x00000418        0x0
  *(.gnu.version)
- .gnu.version   0x00000000        0x0 release\startapp_platform.os
+ .gnu.version   0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.gnu.version_d  0x000003dc        0x0 load address 0x000003d9
+.gnu.version_d  0x00000418        0x0
  *(.gnu.version_d)
  .gnu.version_d
-                0x00000000        0x0 release\startapp_platform.os
+                0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.gnu.version_r  0x000003dc        0x0 load address 0x000003d9
+.gnu.version_r  0x00000418        0x0
  *(.gnu.version_r)
  .gnu.version_r
-                0x00000000        0x0 release\startapp_platform.os
+                0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.rel.dyn        0x000003dc       0x18
+.rel.dyn        0x00000418       0x28
  *(.rel.init)
  *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ .rel.text      0x00000418        0x8 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
  *(.rel.fini)
  *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
  *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
@@ -106,8 +110,10 @@ LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.
  *(.rel.ctors)
  *(.rel.dtors)
  *(.rel.got)
- .rel.got       0x000003dc       0x18 release\startapp_platform.os
+ .rel.got       0x00000420       0x18 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.fini_array
+                0x00000438        0x8 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
 .rela.dyn
  *(.rela.init)
@@ -122,9 +128,9 @@ LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.
  *(.rela.got)
  *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
 
-.rel.plt        0x000003f4       0x18
+.rel.plt        0x00000440       0x20
  *(.rel.plt)
- .rel.plt       0x000003f4       0x18 release\startapp_platform.os
+ .rel.plt       0x00000440       0x20 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
 .rela.plt
  *(.rela.plt)
@@ -132,45 +138,46 @@ LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.
 .init
  *(.init)
 
-.plt            0x0000040c       0x38
+.plt            0x00000460       0x44
  *(.plt)
- .plt           0x0000040c       0x38 release\startapp_platform.os
+ .plt           0x00000460       0x44 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.text           0x00000444      0x43c
+.text           0x000004a4      0x430
  *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x000004a4       0x10 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
  .text._Z26startappTerminate_platformv
-                0x00000444        0x4 release\startapp_platform.os
-                0x00000444                startappTerminate_platform()
+                0x000004b4        0x4 release\startapp_platform.os
+                0x000004b4                startappTerminate_platform()
  .text._ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz
-                0x00000448       0x38 release\startapp_platform.os
-                0x00000448                _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
+                0x000004b8       0x38 release\startapp_platform.os
+                0x000004b8                _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
  .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
-                0x00000480       0x38 release\startapp_platform.os
-                0x00000480                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+                0x000004f0       0x38 release\startapp_platform.os
+                0x000004f0                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
  .text._Z21startappInit_platformv
-                0x000004b8      0x198 release\startapp_platform.os
-                0x000004b8                startappInit_platform()
- .text._Z16initSDK_platformPKcS0_
-                0x00000650       0xa0 release\startapp_platform.os
-                0x00000650                initSDK_platform(char const*, char const*)
+                0x00000528      0x198 release\startapp_platform.os
+                0x00000528                startappInit_platform()
+ .text._Z16initSDK_platformv
+                0x000006c0       0x58 release\startapp_platform.os
+                0x000006c0                initSDK_platform()
  .text._ZL27s3eEdkAndroidFindClass_realPKc
-                0x000006f0       0xa0 release\startapp_platform.os
- .text.initSDK  0x00000790       0x10 release\startapp.os
-                0x00000790                initSDK
+                0x00000718       0xd4 release\startapp_platform.os
+ .text.initSDK  0x000007ec       0x10 release\startapp.os
+                0x000007ec                initSDK
  .text._Z17startappTerminatev
-                0x000007a0       0x10 release\startapp.os
-                0x000007a0                startappTerminate()
+                0x000007fc       0x10 release\startapp.os
+                0x000007fc                startappTerminate()
  .text._Z12startappInitv
-                0x000007b0       0x10 release\startapp.os
-                0x000007b0                startappInit()
- .text._ZL12initSDK_wrapPKcS0_
-                0x000007c0       0x28 release\startapp_register.os
+                0x0000080c       0x10 release\startapp.os
+                0x0000080c                startappInit()
+ .text._ZL12initSDK_wrapv
+                0x0000081c       0x20 release\startapp_register.os
  .text.RegisterExt
-                0x000007e8       0x68 release\startapp_register.os
-                0x000007e8                RegisterExt
+                0x0000083c       0x68 release\startapp_register.os
+                0x0000083c                RegisterExt
  .text.s3eEdkThreadRunOnOS
-                0x00000850       0x30 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
-                0x00000850                s3eEdkThreadRunOnOS
+                0x000008a4       0x30 C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x000008a4                s3eEdkThreadRunOnOS
  *(.gnu.warning)
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
@@ -183,31 +190,27 @@ LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.
 
 .fini
  *(.fini)
-                0x00000880                PROVIDE (__etext, .)
-                0x00000880                PROVIDE (_etext, .)
-                0x00000880                PROVIDE (etext, .)
+                0x000008d4                PROVIDE (__etext, .)
+                0x000008d4                PROVIDE (_etext, .)
+                0x000008d4                PROVIDE (etext, .)
 
-.rodata         0x00000880       0x48
+.rodata         0x000008d4       0x24
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x00000880       0x48 release\startapp_platform.os
+                0x000008d4       0x24 release\startapp_platform.os
  .rodata.str1.4
                 0x00000000        0xc release\startapp_register.os
 
 .rodata1
  *(.rodata1)
 
-.ARM.extab      0x000008c8        0xc
+.ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
- .ARM.extab.text.s3eEdkThreadRunOnOS
-                0x000008c8        0xc C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
-                0x000008d4                __exidx_start = .
+                0x000008f8                __exidx_start = .
 
-.ARM.exidx      0x000008d4        0x8
+.ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx.text.s3eEdkThreadRunOnOS
-                0x000008d4        0x8 C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
-                0x000008dc                __exidx_end = .
+                0x000008f8                __exidx_end = .
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
@@ -217,8 +220,8 @@ LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.
 
 .gcc_except_table
  *(.gcc_except_table .gcc_except_table.*)
-                0x000008dc                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
-                0x000018dc                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
+                0x000008f8                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x000018f8                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
 
 .eh_frame
  *(.eh_frame)
@@ -236,12 +239,18 @@ LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.
 .preinit_array
  *(.preinit_array)
 
-.init_array
+.init_array     0x000018f8        0x8
  *(SORT(.init_array.*))
  *(.init_array)
+ .init_array    0x000018f8        0x4 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x000018f8                __INIT_ARRAY__
+ .init_array    0x000018fc        0x4 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 
-.fini_array
+.fini_array     0x00001900        0xc
  *(.fini_array)
+ .fini_array    0x00001900        0x8 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x00001900                __FINI_ARRAY__
+ .fini_array    0x00001908        0x4 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  *(SORT(.fini_array.*))
 
 .ctors
@@ -265,45 +274,47 @@ LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.
  *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
  *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
 
-.dynamic        0x000018dc       0xa8
+.dynamic        0x0000190c       0xd0
  *(.dynamic)
- .dynamic       0x000018dc       0xa8 release\startapp_platform.os
-                0x000018dc                _DYNAMIC
-                0x00001984                . = (. DATA_SEGMENT_RELRO_END 0x0)
+ .dynamic       0x0000190c       0xd0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x0000190c                _DYNAMIC
+                0x000019dc                . = (. DATA_SEGMENT_RELRO_END 0x0)
 
-.got            0x00001984       0x24
+.got            0x000019dc       0x28
  *(.got.plt)
- .got.plt       0x00001984       0x18 release\startapp_platform.os
-                0x00001984                _GLOBAL_OFFSET_TABLE_
+ .got.plt       0x000019dc       0x1c C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x000019dc                _GLOBAL_OFFSET_TABLE_
  *(.got)
- .got           0x0000199c        0xc release\startapp_platform.os
+ .got           0x000019f8        0xc C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.data           0x000019a8        0x0
-                0x000019a8                __data_start = .
+.data           0x00001a04        0x0
+                0x00001a04                __data_start = .
  *(.data .data.* .gnu.linkonce.d.*)
 
 .data1
  *(.data1)
-                0x000019a8                _edata = .
-                0x000019a8                PROVIDE (edata, .)
-                0x000019a8                __bss_start = .
-                0x000019a8                __bss_start__ = .
+                0x00001a04                _edata = .
+                0x00001a04                PROVIDE (edata, .)
+                0x00001a04                __bss_start = .
+                0x00001a04                __bss_start__ = .
 
-.bss            0x000019a8        0x8
+.bss            0x00001a10       0x18
  *(.dynbss)
- .dynbss        0x00000000        0x0 release\startapp_platform.os
+ .dynbss        0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x000019a8        0x8 release\startapp_platform.os
+ .bss           0x00001a10       0x10 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x00001a10                __dso_handle
+ .bss           0x00001a20        0x8 release\startapp_platform.os
  *(COMMON)
-                0x000019b0                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0x000019b0                _bss_end__ = .
-                0x000019b0                __bss_end__ = .
-                0x000019b0                . = ALIGN (0x4)
-                0x000019b0                . = ALIGN (0x4)
-                0x000019b0                __end__ = .
-                0x000019b0                _end = .
-                0x000019b0                PROVIDE (end, .)
-                0x000019b0                . = DATA_SEGMENT_END (.)
+                0x00001a28                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00001a28                _bss_end__ = .
+                0x00001a28                __bss_end__ = .
+                0x00001a28                . = ALIGN (0x4)
+                0x00001a28                . = ALIGN (0x4)
+                0x00001a28                __end__ = .
+                0x00001a28                _end = .
+                0x00001a28                PROVIDE (end, .)
+                0x00001a28                . = DATA_SEGMENT_END (.)
 
 .stab
  *(.stab)
@@ -323,12 +334,12 @@ LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.
 .stab.indexstr
  *(.stab.indexstr)
 
-.comment        0x00000000       0x61
+.comment        0x00000000       0x48
  *(.comment)
  .comment       0x00000000       0x12 release\startapp_platform.os
  .comment       0x00000012       0x12 release\startapp.os
  .comment       0x00000024       0x12 release\startapp_register.os
- .comment       0x00000036       0x2b C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .comment       0x00000036       0x12 C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
 
 .debug
  *(.debug)
@@ -396,15 +407,19 @@ LOAD C:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.
 /DISCARD/
  *(.note.GNU-stack)
  *(.gnu_debuglink)
-OUTPUT(C:\marmalade\6.0\extensions\startapp\lib\android\libstartapp.so elf32-littlearm)
+OUTPUT(C:\Marmalade\6.1\extensions\startapp\lib\android\libstartapp.so elf32-littlearm)
 
 .ARM.attributes
-                0x00000000       0x2a
+                0x00000000       0x27
  .ARM.attributes
-                0x00000000       0x28 release\startapp_platform.os
+                0x00000000       0x19 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
  .ARM.attributes
-                0x00000028       0x28 release\startapp.os
+                0x00000019       0x28 release\startapp_platform.os
  .ARM.attributes
-                0x00000050       0x28 release\startapp_register.os
+                0x00000041       0x28 release\startapp.os
  .ARM.attributes
-                0x00000078       0x2c C:\marmalade\6.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000069       0x28 release\startapp_register.os
+ .ARM.attributes
+                0x00000091       0x28 C:\Marmalade\6.1\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .ARM.attributes
+                0x000000b9       0x17 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o

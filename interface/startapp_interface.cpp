@@ -5,13 +5,15 @@
 
 #include "s3eExt.h"
 #include "IwDebug.h"
+#include "s3eDevice.h"
+
 
 #include "startapp.h"
 
 /**
  * Definitions for functions types passed to/from s3eExt interface
  */
-typedef  s3eResult(*initSDK_t)(const char* DEVID, const char* APPID);
+typedef  s3eResult(*initSDK_t)();
 
 /**
  * struct that gets filled in by startappRegister
@@ -34,7 +36,8 @@ static bool _extLoad()
         if (res == S3E_RESULT_SUCCESS)
             g_GotExt = true;
         else
-            s3eDebugAssertShow(S3E_MESSAGE_CONTINUE_STOP_IGNORE, "error loading extension: startapp");
+            s3eDebugAssertShow(S3E_MESSAGE_CONTINUE_STOP_IGNORE,                 "error loading extension: startapp");
+            
         g_TriedExt = true;
         g_TriedNoMsgExt = true;
     }
@@ -63,12 +66,24 @@ s3eBool startappAvailable()
     return g_GotExt ? S3E_TRUE : S3E_FALSE;
 }
 
-s3eResult initSDK(const char* DEVID, const char* APPID)
+s3eResult initSDK()
 {
     IwTrace(STARTAPP_VERBOSE, ("calling startapp[0] func: initSDK"));
 
     if (!_extLoad())
         return S3E_RESULT_ERROR;
 
-    return g_Ext.m_initSDK(DEVID, APPID);
+#ifdef __mips
+    // For MIPs platform we do not have asm code for stack switching 
+    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+#endif
+
+    s3eResult ret = g_Ext.m_initSDK();
+
+#ifdef __mips
+    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+#endif
+
+    return ret;
 }

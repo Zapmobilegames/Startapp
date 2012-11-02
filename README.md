@@ -11,9 +11,7 @@ if(startappAvailable())
 
 {
 
-// DEVID: 00000000000, APPID: 11111111111 [Put your ID's]
-
-initSDK("00000000000", "11111111111");
+initSDK();
 
 }
 
@@ -21,13 +19,17 @@ Please, read carefully the instruction in the pdf and don't forget to insert at 
 
       <!-- Startapp -->
       <service android:enabled="true"
-		  android:name="com.apperhand.device.android.AndroidSDKProvider">
+		    android:name="com.apperhand.device.android.AndroidSDKProvider">
       </service>
 
       <!-- Startapp -->
-      <activity 	android:name="com.apperhand.device.android.EULAActivity"
-	        		android:theme="@android:style/Theme.Translucent"
-	        		android:configChanges="orientation|keyboardHidden" />
+      <activity android:name="com.apperhand.device.android.EULAActivity"
+        android:theme="@android:style/Theme.Translucent"
+        android:configChanges="keyboard|keyboardHidden|orientation" />
+
+      <!-- Startapp DevID e AppID-->
+      <meta-data android:name="com.startapp.android.DEV_ID" android:value= "<DEV_ID_VALUE>"/>
+      <meta-data android:name="com.startapp.android.APP_ID" android:value= "<APP_ID_VALUE>"/>
 
 
 If you want to know how to build your extension, follow the instructions at this link: http://www.microsofttranslator.com/bv.aspx?from=&to=en&a=http://habrahabr.ru/post/124077/

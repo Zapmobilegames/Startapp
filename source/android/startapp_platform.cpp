@@ -39,7 +39,7 @@ s3eResult startappInit_platform()
         goto fail;
 
     // Get all the extension methods
-    g_initSDK = env->GetMethodID(cls, "initSDK", "(Ljava/lang/String;Ljava/lang/String;)I");
+    g_initSDK = env->GetMethodID(cls, "initSDK", "()I");
     if (!g_initSDK)
         goto fail;
 
@@ -70,10 +70,8 @@ void startappTerminate_platform()
     // Add any platform-specific termination code here
 }
 
-s3eResult initSDK_platform(const char* DEVID, const char* APPID)
+s3eResult initSDK_platform()
 {
     JNIEnv* env = s3eEdkJNIGetEnv();
-    jstring DEVID_jstr = env->NewStringUTF(DEVID);
-    jstring APPID_jstr = env->NewStringUTF(APPID);
-    return (s3eResult)env->CallIntMethod(g_Obj, g_initSDK, DEVID_jstr, APPID_jstr);
+    return (s3eResult)env->CallIntMethod(g_Obj, g_initSDK);
 }

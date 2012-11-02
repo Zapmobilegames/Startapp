@@ -23,7 +23,7 @@ void startappTerminate()
     startappTerminate_platform();
 }
 
-s3eResult initSDK(const char* DEVID, const char* APPID)
+s3eResult initSDK()
 {
-	return initSDK_platform(DEVID, APPID);
+	return initSDK_platform();
 }

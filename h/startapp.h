@@ -26,7 +26,7 @@ S3E_BEGIN_C_DECL
  */
 s3eBool startappAvailable();
 
-s3eResult initSDK(const char* DEVID, const char* APPID);
+s3eResult initSDK();
 
 S3E_END_C_DECL
 

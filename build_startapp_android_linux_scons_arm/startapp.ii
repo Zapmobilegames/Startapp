@@ -1,0 +1,147 @@
+# 1 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp.cpp"
+# 1 "c:\\Marmalade\\6.1\\extensions\\startapp\\build_startapp_android_linux_scons_arm//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "./temp_defines_debug.h" 1
+# 1 "<command-line>" 2
+# 1 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp.cpp"
+# 13 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp.cpp"
+# 1 "../source/h/startapp_internal.h" 1
+# 18 "../source/h/startapp_internal.h"
+# 1 "../../../s3e/h/s3eTypes.h" 1
+# 35 "../../../s3e/h/s3eTypes.h"
+typedef unsigned char s3e_uint8_t;
+typedef signed char s3e_int8_t;
+typedef unsigned short int s3e_uint16_t;
+typedef signed short int s3e_int16_t;
+typedef unsigned int s3e_uint32_t;
+typedef signed int s3e_int32_t;
+# 49 "../../../s3e/h/s3eTypes.h"
+  typedef signed long long s3e_int64_t;
+  typedef unsigned long long s3e_uint64_t;
+# 72 "../../../s3e/h/s3eTypes.h"
+typedef s3e_uint64_t uint64_t;
+typedef s3e_int64_t int64_t;
+typedef s3e_uint32_t uint32_t;
+typedef s3e_int32_t int32_t;
+typedef s3e_uint16_t uint16_t;
+typedef s3e_int16_t int16_t;
+typedef s3e_uint8_t uint8_t;
+typedef s3e_int8_t int8_t;
+# 94 "../../../s3e/h/s3eTypes.h"
+    typedef int intptr_t;
+    typedef unsigned int uintptr_t;
+# 106 "../../../s3e/h/s3eTypes.h"
+typedef unsigned int uint;
+typedef unsigned short int ushort;
+typedef unsigned long int ulong;
+typedef unsigned char uint8;
+typedef signed char int8;
+
+
+
+
+
+
+
+typedef int64_t int64;
+typedef uint64_t uint64;
+
+
+
+
+
+typedef unsigned int uint32;
+
+
+
+
+
+
+typedef signed int int32;
+
+
+
+
+
+
+typedef uint16_t uint16;
+
+
+
+
+typedef int16_t int16;
+# 224 "../../../s3e/h/s3eTypes.h"
+typedef enum s3eResult
+{
+    S3E_RESULT_SUCCESS = 0,
+    S3E_RESULT_ERROR = 1
+} s3eResult;
+
+
+
+
+typedef uint8 s3eBool;
+# 244 "../../../s3e/h/s3eTypes.h"
+typedef unsigned short s3eWChar;
+# 254 "../../../s3e/h/s3eTypes.h"
+typedef int32 (*s3eCallback) (void* systemData, void* userData);
+# 19 "../source/h/startapp_internal.h" 2
+# 1 "../h/startapp.h" 1
+# 21 "../h/startapp.h"
+extern "C" {
+
+
+
+
+
+s3eBool startappAvailable();
+
+s3eResult initSDK();
+
+}
+# 20 "../source/h/startapp_internal.h" 2
+# 1 "../source/h/startapp_autodefs.h" 1
+# 21 "../source/h/startapp_internal.h" 2
+
+
+
+
+
+
+
+s3eResult startappInit();
+
+
+
+
+s3eResult startappInit_platform();
+
+
+
+
+
+void startappTerminate();
+
+
+
+
+void startappTerminate_platform();
+s3eResult initSDK_platform();
+# 14 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp.cpp" 2
+s3eResult startappInit()
+{
+
+    return startappInit_platform();
+}
+
+void startappTerminate()
+{
+
+    startappTerminate_platform();
+}
+
+s3eResult initSDK()
+{
+ return initSDK_platform();
+}

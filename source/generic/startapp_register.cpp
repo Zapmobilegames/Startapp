@@ -24,10 +24,10 @@ extern void startappTerminate();
 // code is oftern build standalone, outside the main loader build.
 #if defined I3D_OS_IPHONE || defined I3D_OS_OSX || defined I3D_OS_LINUX || defined I3D_OS_WINDOWS
 
-static s3eResult initSDK_wrap(const char* DEVID, const char* APPID)
+static s3eResult initSDK_wrap()
 {
     IwTrace(STARTAPP_VERBOSE, ("calling startapp func on main thread: initSDK"));
-    return (s3eResult)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)initSDK, 2, DEVID, APPID);
+    return (s3eResult)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)initSDK, 0);
 }
 
 #define initSDK initSDK_wrap
