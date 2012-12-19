@@ -3,8 +3,9 @@ Startapp
 
 StartApp is a new monetization and distribution platform focusing on free applications for mobile phones. As of today, it is available on Android only.
 You can ask for theirs SDK using this link and you'll get 25$ after first 100 downloads as an entry gift: http://startapp.com/rf7dzh2
+Download the jar and place it in your app folder.
 
-This is an extension for Marmalade of the Startapp SDK, version 1.0.18.
+This is an extension for Marmalade of the Startapp SDK, version 1.0.19.
 
 The extension is really simple. The only lines to be added in your Main.cpp, just before Game::Create() are:
 
