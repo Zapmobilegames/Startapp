@@ -1,0 +1,36 @@
+#!/usr/bin/env mkb
+files
+{
+    s3eHelloWorld.cpp
+}
+
+options
+{
+    strict
+}
+
+deployments
+{
+    splashscreen="../resources/splashscreens/"
+
+	android-manifest=AndroidManifest.xml
+	android-external-jars=StartAppSearchSDK-1.0.19.jar
+}
+
+subprojects
+{
+	startapp
+}
+#### AUTO GENERATED deployment settings from DeployTool.exe. Do not edit below this line ####
+deployments
+{
+	["Default"]
+	android-pkgname='com.zapmobilegames.myexample'
+	caption='StartappExample'
+	copyright='Zapmobilegames'
+	name='StartappExample'
+	provider='Zapmobilegames'
+	version-major=1
+	version-minor=0
+	version-revision=0
+}
