@@ -1,11 +1,11 @@
-# 1 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp.cpp"
-# 1 "c:\\Marmalade\\6.1\\extensions\\startapp\\build_startapp_android_linux_scons_arm//"
+# 1 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp.cpp"
+# 1 "c:\\Marmalade\\6.2\\extensions\\startapp\\build_startapp_android_linux_scons_arm//"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "./temp_defines_debug.h" 1
 # 1 "<command-line>" 2
-# 1 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp.cpp"
-# 13 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp.cpp"
+# 1 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp.cpp"
+# 13 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp.cpp"
 # 1 "../source/h/startapp_internal.h" 1
 # 18 "../source/h/startapp_internal.h"
 # 1 "../../../s3e/h/s3eTypes.h" 1
@@ -128,7 +128,7 @@ void startappTerminate();
 
 void startappTerminate_platform();
 s3eResult initSDK_platform();
-# 14 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp.cpp" 2
+# 14 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp.cpp" 2
 s3eResult startappInit()
 {
 

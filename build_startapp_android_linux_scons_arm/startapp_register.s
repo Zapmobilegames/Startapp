@@ -1,5 +1,6 @@
-	.arch armv4t
-	.fpu softvfp
+	.arch armv5te
+	.eabi_attribute 27, 3
+	.fpu vfp
 	.eabi_attribute 20, 1
 	.eabi_attribute 21, 1
 	.eabi_attribute 23, 3
@@ -29,9 +30,8 @@
 	.type	_ZL12initSDK_wrapv, %function
 _ZL12initSDK_wrapv:
 .LFB33:
-	.file 1 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
+	.file 1 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
 	.loc 1 28 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, lr}
@@ -74,8 +74,7 @@ _ZL12initSDK_wrapv:
 	mov	r3, r0
 	.loc 1 31 0
 	mov	r0, r3
-	ldmfd	sp!, {r4, lr}
-	bx	lr
+	ldmfd	sp!, {r4, pc}
 .L5:
 	.align	2
 .L4:
@@ -98,7 +97,6 @@ _ZL12initSDK_wrapv:
 _Z19startappRegisterExtv:
 .LFB34:
 	.loc 1 38 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -140,8 +138,7 @@ _Z19startappRegisterExtv:
 .LBE2:
 	.loc 1 52 0
 	add	sp, sp, #28
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .L9:
 	.align	2
 .L8:
@@ -159,7 +156,6 @@ _Z19startappRegisterExtv:
 RegisterExt:
 .LFB35:
 	.loc 1 71 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, lr}
@@ -167,8 +163,7 @@ RegisterExt:
 	.loc 1 72 0
 	bl	_Z19startappRegisterExtv(PLT)
 	.loc 1 73 0
-	ldmfd	sp!, {r4, lr}
-	bx	lr
+	ldmfd	sp!, {r4, pc}
 .LFE35:
 	.size	RegisterExt, .-RegisterExt
 	.section	.debug_frame,"",%progbits
@@ -684,6 +679,9 @@ RegisterExt:
 	.ascii	"long long int\000"
 .LASF4:
 	.ascii	"unsigned int\000"
+.LASF16:
+	.ascii	"c:\\\\Marmalade\\\\6.2\\\\extensions\\\\startapp\\\\"
+	.ascii	"build_startapp_android_linux_scons_arm\000"
 .LASF0:
 	.ascii	"unsigned char\000"
 .LASF13:
@@ -698,21 +696,21 @@ RegisterExt:
 	.ascii	"initSDK_wrap\000"
 .LASF7:
 	.ascii	"long unsigned int\000"
+.LASF3:
+	.ascii	"short int\000"
 .LASF6:
 	.ascii	"long long unsigned int\000"
 .LASF14:
 	.ascii	"GNU C++ 4.4.3\000"
-.LASF15:
-	.ascii	"C:\\Marmalade\\6.1\\extensions\\startapp\\source\\g"
-	.ascii	"eneric\\startapp_register.cpp\000"
 .LASF17:
 	.ascii	"s3eResult\000"
 .LASF11:
 	.ascii	"char\000"
 .LASF10:
 	.ascii	"long int\000"
-.LASF3:
-	.ascii	"short int\000"
+.LASF15:
+	.ascii	"C:\\Marmalade\\6.2\\extensions\\startapp\\source\\g"
+	.ascii	"eneric\\startapp_register.cpp\000"
 .LASF21:
 	.ascii	"RegisterExt\000"
 .LASF2:
@@ -721,9 +719,6 @@ RegisterExt:
 	.ascii	"signed char\000"
 .LASF12:
 	.ascii	"funcPtrs\000"
-.LASF16:
-	.ascii	"c:\\\\Marmalade\\\\6.1\\\\extensions\\\\startapp\\\\"
-	.ascii	"build_startapp_android_linux_scons_arm\000"
 .LASF19:
 	.ascii	"startappRegisterExt\000"
 	.ident	"GCC: (GNU) 4.4.3"

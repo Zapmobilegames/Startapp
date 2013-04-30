@@ -1,11 +1,11 @@
-# 1 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
-# 1 "c:\\Marmalade\\6.1\\extensions\\startapp\\build_startapp_android_linux_scons_arm//"
+# 1 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
+# 1 "c:\\Marmalade\\6.2\\extensions\\startapp\\build_startapp_android_linux_scons_arm//"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "./temp_defines_debug.h" 1
 # 1 "<command-line>" 2
-# 1 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
-# 13 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
+# 1 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
+# 13 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
 # 1 "../../../modules/iwutil/h/IwDebug.h" 1
 # 15 "../../../modules/iwutil/h/IwDebug.h"
 # 1 "../../../s3e/h/s3eTypes.h" 1
@@ -492,7 +492,14 @@ typedef enum s3eDeviceProperty
 
 
 
-    S3E_DEVICE_3D_MODE = 32
+    S3E_DEVICE_3D_MODE = 32,
+
+
+
+
+
+
+    S3E_DEVICE_PROCESS_ID = 33
 
 } s3eDeviceProperty;
 
@@ -710,7 +717,7 @@ typedef enum s3eDeviceArchitecture
     S3E_DEVICE_ARCHITECTURE_MIPS = 13,
     S3E_DEVICE_ARCHITECTURE_MAX = 14
 } s3eDeviceArchitecture;
-# 575 "../../../s3e/h/s3eDevice.h"
+# 582 "../../../s3e/h/s3eDevice.h"
 typedef enum s3eDeviceSoftKeyPosition
 {
     S3E_DEVICE_SOFTKEY_BOTTOM_LEFT = 0,
@@ -718,21 +725,21 @@ typedef enum s3eDeviceSoftKeyPosition
     S3E_DEVICE_SOFTKEY_TOP_RIGHT = 2,
     S3E_DEVICE_SOFTKEY_TOP_LEFT = 3
 } s3eDeviceSoftKeyPosition;
-# 616 "../../../s3e/h/s3eDevice.h"
+# 623 "../../../s3e/h/s3eDevice.h"
 extern "C" const char* s3eDeviceGetString(s3eDeviceProperty property);
-# 651 "../../../s3e/h/s3eDevice.h"
+# 658 "../../../s3e/h/s3eDevice.h"
 extern "C" int32 s3eDeviceGetInt(s3eDeviceProperty property);
-# 671 "../../../s3e/h/s3eDevice.h"
+# 678 "../../../s3e/h/s3eDevice.h"
 extern "C" s3eResult s3eDeviceSetInt(s3eDeviceProperty property, int32 value);
-# 699 "../../../s3e/h/s3eDevice.h"
+# 706 "../../../s3e/h/s3eDevice.h"
 extern "C" int64 s3eDeviceYield(int32 ms =0);
-# 721 "../../../s3e/h/s3eDevice.h"
+# 728 "../../../s3e/h/s3eDevice.h"
 extern "C" void s3eDeviceUnYield();
-# 749 "../../../s3e/h/s3eDevice.h"
+# 756 "../../../s3e/h/s3eDevice.h"
 extern "C" void s3eDeviceYieldUntilEvent(int32 ms =0x7fffffffL);
-# 784 "../../../s3e/h/s3eDevice.h"
+# 791 "../../../s3e/h/s3eDevice.h"
 extern "C" s3eResult s3eDeviceExecPushNext(const char* filename, const char* config_prepend =__null, const char* config_append =__null);
-# 800 "../../../s3e/h/s3eDevice.h"
+# 807 "../../../s3e/h/s3eDevice.h"
 extern "C" void s3eDeviceExit(int code =0) __attribute__ ((noreturn));
 
 
@@ -759,36 +766,45 @@ typedef enum s3eDeviceState
 
     S3E_DEVICE_STATE_RUNNING = 5
 } s3eDeviceState;
-# 837 "../../../s3e/h/s3eDevice.h"
+# 844 "../../../s3e/h/s3eDevice.h"
 typedef enum s3eDeviceCallback
 {
-# 850 "../../../s3e/h/s3eDevice.h"
+# 857 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_PAUSE = 0,
-# 862 "../../../s3e/h/s3eDevice.h"
+# 869 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_UNPAUSE = 1,
-# 874 "../../../s3e/h/s3eDevice.h"
+# 881 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_EXIT = 2,
-# 890 "../../../s3e/h/s3eDevice.h"
+# 897 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_VOL_UP = 17,
-# 906 "../../../s3e/h/s3eDevice.h"
+# 913 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_VOL_DOWN = 18,
-# 924 "../../../s3e/h/s3eDevice.h"
+# 931 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_MAINS_POWER_CHANGED = 20,
-# 936 "../../../s3e/h/s3eDevice.h"
+# 943 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_BACKGROUND = 22,
-# 948 "../../../s3e/h/s3eDevice.h"
+# 955 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_FOREGROUND = 23,
-# 962 "../../../s3e/h/s3eDevice.h"
+# 969 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_NETWORK_ONLINE = 24,
-# 976 "../../../s3e/h/s3eDevice.h"
+# 983 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_NETWORK_OFFLINE = 25,
-# 989 "../../../s3e/h/s3eDevice.h"
+# 997 "../../../s3e/h/s3eDevice.h"
     S3E_DEVICE_SIMULATOR_RESTART = 26,
-
+# 1013 "../../../s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_ACTIVE = 27,
+# 1029 "../../../s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_INACTIVE = 28,
+# 1045 "../../../s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_FULLSCREEN = 29,
+# 1061 "../../../s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_THUMBNAIL = 30,
+# 1077 "../../../s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_INVISIBLE = 31,
 
     S3E_DEVICE_CALLBACK_MAX
 } s3eDeviceCallback;
-# 1011 "../../../s3e/h/s3eDevice.h"
+# 1098 "../../../s3e/h/s3eDevice.h"
 typedef struct s3eDeviceVolChangeInfo
 {
 
@@ -797,7 +813,7 @@ typedef struct s3eDeviceVolChangeInfo
 
 
     s3eBool m_VolUp;
-# 1036 "../../../s3e/h/s3eDevice.h"
+# 1123 "../../../s3e/h/s3eDevice.h"
     s3eBool m_OverrideDefaultBehaviour;
 } s3eDeviceVolChangeInfo;
 
@@ -812,9 +828,9 @@ typedef struct s3eDeviceStateChangeInfo
 
     int32 m_State;
 } s3eDeviceStateChangeInfo;
-# 1071 "../../../s3e/h/s3eDevice.h"
+# 1158 "../../../s3e/h/s3eDevice.h"
 extern "C" s3eResult s3eDeviceRegister(s3eDeviceCallback cbid, s3eCallback fn, void* userdata);
-# 1091 "../../../s3e/h/s3eDevice.h"
+# 1178 "../../../s3e/h/s3eDevice.h"
 extern "C" s3eResult s3eDeviceUnRegister(s3eDeviceCallback cbid, s3eCallback fn);
 
 
@@ -824,11 +840,11 @@ extern "C" s3eResult s3eDeviceUnRegister(s3eDeviceCallback cbid, s3eCallback fn)
 
 
 extern "C" void s3eDeviceRequestQuit();
-# 1110 "../../../s3e/h/s3eDevice.h"
+# 1197 "../../../s3e/h/s3eDevice.h"
 extern "C" s3eBool s3eDeviceCheckQuitRequest();
-# 1120 "../../../s3e/h/s3eDevice.h"
+# 1207 "../../../s3e/h/s3eDevice.h"
 extern "C" s3eBool s3eDeviceCheckPauseRequest();
-# 1134 "../../../s3e/h/s3eDevice.h"
+# 1221 "../../../s3e/h/s3eDevice.h"
 extern "C" void s3eDeviceBacklightOn();
 
 
@@ -1990,9 +2006,9 @@ _To IwSafeCast(_From from)
 
     return static_cast <_To> (from);
 }
-# 14 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp_register.cpp" 2
+# 14 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp_register.cpp" 2
 # 1 "../source/h/startapp_autodefs.h" 1
-# 15 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp_register.cpp" 2
+# 15 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp_register.cpp" 2
 # 1 "../../../s3e/edk/h/s3eEdk.h" 1
 # 18 "../../../s3e/edk/h/s3eEdk.h"
 extern "C" {
@@ -2197,7 +2213,7 @@ extern "C" int s3eEdkGetAppVersionMajor();
 extern "C" int s3eEdkGetAppVersionMinor();
 # 903 "../../../s3e/edk/h/s3eEdk.h"
 }
-# 16 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp_register.cpp" 2
+# 16 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp_register.cpp" 2
 # 1 "../h/startapp.h" 1
 # 21 "../h/startapp.h"
 extern "C" {
@@ -2211,7 +2227,7 @@ s3eBool startappAvailable();
 s3eResult initSDK();
 
 }
-# 17 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp_register.cpp" 2
+# 17 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp_register.cpp" 2
 
 extern s3eResult startappInit();
 extern void startappTerminate();
@@ -2248,7 +2264,7 @@ void startappRegisterExt()
 
     s3eEdkRegister("startapp", funcPtrs, sizeof(funcPtrs), flags, startappInit, startappTerminate, 0);
 }
-# 70 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
+# 70 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp_register.cpp"
 extern "C" __attribute__ ((visibility("default"))) void RegisterExt()
 {
     startappRegisterExt();

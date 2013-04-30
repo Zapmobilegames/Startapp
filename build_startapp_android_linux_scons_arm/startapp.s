@@ -1,5 +1,6 @@
-	.arch armv4t
-	.fpu softvfp
+	.arch armv5te
+	.eabi_attribute 27, 3
+	.fpu vfp
 	.eabi_attribute 20, 1
 	.eabi_attribute 21, 1
 	.eabi_attribute 23, 3
@@ -24,9 +25,8 @@
 	.type	_Z12startappInitv, %function
 _Z12startappInitv:
 .LFB0:
-	.file 1 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\generic\\startapp.cpp"
+	.file 1 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\generic\\startapp.cpp"
 	.loc 1 15 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, lr}
@@ -36,8 +36,7 @@ _Z12startappInitv:
 	mov	r3, r0
 	.loc 1 18 0
 	mov	r0, r3
-	ldmfd	sp!, {r4, lr}
-	bx	lr
+	ldmfd	sp!, {r4, pc}
 .LFE0:
 	.size	_Z12startappInitv, .-_Z12startappInitv
 	.section	.text._Z17startappTerminatev,"ax",%progbits
@@ -48,7 +47,6 @@ _Z12startappInitv:
 _Z17startappTerminatev:
 .LFB1:
 	.loc 1 21 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, lr}
@@ -56,8 +54,7 @@ _Z17startappTerminatev:
 	.loc 1 23 0
 	bl	_Z26startappTerminate_platformv(PLT)
 	.loc 1 24 0
-	ldmfd	sp!, {r4, lr}
-	bx	lr
+	ldmfd	sp!, {r4, pc}
 .LFE1:
 	.size	_Z17startappTerminatev, .-_Z17startappTerminatev
 	.section	.text.initSDK,"ax",%progbits
@@ -68,7 +65,6 @@ _Z17startappTerminatev:
 initSDK:
 .LFB2:
 	.loc 1 27 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	stmfd	sp!, {r4, lr}
@@ -78,8 +74,7 @@ initSDK:
 	mov	r3, r0
 	.loc 1 29 0
 	mov	r0, r3
-	ldmfd	sp!, {r4, lr}
-	bx	lr
+	ldmfd	sp!, {r4, pc}
 .LFE2:
 	.size	initSDK, .-initSDK
 	.section	.debug_frame,"",%progbits
@@ -478,12 +473,13 @@ initSDK:
 	.4byte	0x0
 	.4byte	0x0
 	.section	.debug_str,"MS",%progbits,1
+.LASF14:
+	.ascii	"c:\\\\Marmalade\\\\6.2\\\\extensions\\\\startapp\\\\"
+	.ascii	"build_startapp_android_linux_scons_arm\000"
 .LASF10:
 	.ascii	"startappTerminate\000"
 .LASF8:
 	.ascii	"S3E_RESULT_SUCCESS\000"
-.LASF1:
-	.ascii	"signed char\000"
 .LASF0:
 	.ascii	"unsigned char\000"
 .LASF7:
@@ -494,28 +490,27 @@ initSDK:
 	.ascii	"_Z12startappInitv\000"
 .LASF16:
 	.ascii	"startappInit\000"
-.LASF14:
-	.ascii	"c:\\\\Marmalade\\\\6.1\\\\extensions\\\\startapp\\\\"
-	.ascii	"build_startapp_android_linux_scons_arm\000"
 .LASF4:
 	.ascii	"unsigned int\000"
 .LASF12:
 	.ascii	"GNU C++ 4.4.3\000"
 .LASF6:
 	.ascii	"long long unsigned int\000"
+.LASF18:
+	.ascii	"_Z17startappTerminatev\000"
 .LASF11:
 	.ascii	"initSDK\000"
 .LASF9:
 	.ascii	"S3E_RESULT_ERROR\000"
-.LASF18:
-	.ascii	"_Z17startappTerminatev\000"
+.LASF13:
+	.ascii	"C:\\Marmalade\\6.2\\extensions\\startapp\\source\\g"
+	.ascii	"eneric\\startapp.cpp\000"
 .LASF5:
 	.ascii	"long long int\000"
 .LASF3:
 	.ascii	"short int\000"
-.LASF13:
-	.ascii	"C:\\Marmalade\\6.1\\extensions\\startapp\\source\\g"
-	.ascii	"eneric\\startapp.cpp\000"
+.LASF1:
+	.ascii	"signed char\000"
 .LASF15:
 	.ascii	"s3eResult\000"
 	.ident	"GCC: (GNU) 4.4.3"

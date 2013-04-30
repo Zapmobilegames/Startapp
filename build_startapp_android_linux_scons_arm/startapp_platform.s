@@ -1,5 +1,6 @@
-	.arch armv4t
-	.fpu softvfp
+	.arch armv5te
+	.eabi_attribute 27, 3
+	.fpu vfp
 	.eabi_attribute 20, 1
 	.eabi_attribute 21, 1
 	.eabi_attribute 23, 3
@@ -26,7 +27,6 @@ _ZN7_JNIEnv9FindClassEPKc:
 .LFB2:
 	.file 1 "../../../s3e/edk/h/jni.h"
 	.loc 1 502 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -41,13 +41,11 @@ _ZN7_JNIEnv9FindClassEPKc:
 	ldr	r3, [r3, #24]
 	ldr	r0, [sp, #4]
 	ldr	r1, [sp, #0]
-	mov	lr, pc
-	bx	r3
+	blx	r3
 	mov	r3, r0
 	mov	r0, r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE2:
 	.size	_ZN7_JNIEnv9FindClassEPKc, .-_ZN7_JNIEnv9FindClassEPKc
 	.section	.text._ZN7_JNIEnv17ExceptionOccurredEv,"axG",%progbits,_ZN7_JNIEnv17ExceptionOccurredEv,comdat
@@ -58,7 +56,6 @@ _ZN7_JNIEnv9FindClassEPKc:
 _ZN7_JNIEnv17ExceptionOccurredEv:
 .LFB11:
 	.loc 1 529 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -71,13 +68,11 @@ _ZN7_JNIEnv17ExceptionOccurredEv:
 	ldr	r3, [r3, #0]
 	ldr	r3, [r3, #60]
 	ldr	r0, [sp, #4]
-	mov	lr, pc
-	bx	r3
+	blx	r3
 	mov	r3, r0
 	mov	r0, r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE11:
 	.size	_ZN7_JNIEnv17ExceptionOccurredEv, .-_ZN7_JNIEnv17ExceptionOccurredEv
 	.section	.text._ZN7_JNIEnv17ExceptionDescribeEv,"axG",%progbits,_ZN7_JNIEnv17ExceptionDescribeEv,comdat
@@ -88,7 +83,6 @@ _ZN7_JNIEnv17ExceptionOccurredEv:
 _ZN7_JNIEnv17ExceptionDescribeEv:
 .LFB12:
 	.loc 1 532 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -101,11 +95,9 @@ _ZN7_JNIEnv17ExceptionDescribeEv:
 	ldr	r3, [r3, #0]
 	ldr	r3, [r3, #64]
 	ldr	r0, [sp, #4]
-	mov	lr, pc
-	bx	r3
+	blx	r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE12:
 	.size	_ZN7_JNIEnv17ExceptionDescribeEv, .-_ZN7_JNIEnv17ExceptionDescribeEv
 	.section	.text._ZN7_JNIEnv14ExceptionClearEv,"axG",%progbits,_ZN7_JNIEnv14ExceptionClearEv,comdat
@@ -116,7 +108,6 @@ _ZN7_JNIEnv17ExceptionDescribeEv:
 _ZN7_JNIEnv14ExceptionClearEv:
 .LFB13:
 	.loc 1 535 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -129,11 +120,9 @@ _ZN7_JNIEnv14ExceptionClearEv:
 	ldr	r3, [r3, #0]
 	ldr	r3, [r3, #68]
 	ldr	r0, [sp, #4]
-	mov	lr, pc
-	bx	r3
+	blx	r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE13:
 	.size	_ZN7_JNIEnv14ExceptionClearEv, .-_ZN7_JNIEnv14ExceptionClearEv
 	.section	.text._ZN7_JNIEnv12NewGlobalRefEP8_jobject,"axG",%progbits,_ZN7_JNIEnv12NewGlobalRefEP8_jobject,comdat
@@ -144,7 +133,6 @@ _ZN7_JNIEnv14ExceptionClearEv:
 _ZN7_JNIEnv12NewGlobalRefEP8_jobject:
 .LFB17:
 	.loc 1 547 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -159,13 +147,11 @@ _ZN7_JNIEnv12NewGlobalRefEP8_jobject:
 	ldr	r3, [r3, #84]
 	ldr	r0, [sp, #4]
 	ldr	r1, [sp, #0]
-	mov	lr, pc
-	bx	r3
+	blx	r3
 	mov	r3, r0
 	mov	r0, r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE17:
 	.size	_ZN7_JNIEnv12NewGlobalRefEP8_jobject, .-_ZN7_JNIEnv12NewGlobalRefEP8_jobject
 	.section	.text._ZN7_JNIEnv15DeleteGlobalRefEP8_jobject,"axG",%progbits,_ZN7_JNIEnv15DeleteGlobalRefEP8_jobject,comdat
@@ -176,7 +162,6 @@ _ZN7_JNIEnv12NewGlobalRefEP8_jobject:
 _ZN7_JNIEnv15DeleteGlobalRefEP8_jobject:
 .LFB18:
 	.loc 1 550 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -191,11 +176,9 @@ _ZN7_JNIEnv15DeleteGlobalRefEP8_jobject:
 	ldr	r3, [r3, #88]
 	ldr	r0, [sp, #4]
 	ldr	r1, [sp, #0]
-	mov	lr, pc
-	bx	r3
+	blx	r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE18:
 	.size	_ZN7_JNIEnv15DeleteGlobalRefEP8_jobject, .-_ZN7_JNIEnv15DeleteGlobalRefEP8_jobject
 	.section	.text._ZN7_JNIEnv14DeleteLocalRefEP8_jobject,"axG",%progbits,_ZN7_JNIEnv14DeleteLocalRefEP8_jobject,comdat
@@ -206,7 +189,6 @@ _ZN7_JNIEnv15DeleteGlobalRefEP8_jobject:
 _ZN7_JNIEnv14DeleteLocalRefEP8_jobject:
 .LFB19:
 	.loc 1 553 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -221,11 +203,9 @@ _ZN7_JNIEnv14DeleteLocalRefEP8_jobject:
 	ldr	r3, [r3, #92]
 	ldr	r0, [sp, #4]
 	ldr	r1, [sp, #0]
-	mov	lr, pc
-	bx	r3
+	blx	r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE19:
 	.size	_ZN7_JNIEnv14DeleteLocalRefEP8_jobject, .-_ZN7_JNIEnv14DeleteLocalRefEP8_jobject
 	.section	.text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz,"axG",%progbits,_ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz,comdat
@@ -236,7 +216,6 @@ _ZN7_JNIEnv14DeleteLocalRefEP8_jobject:
 _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz:
 .LFB24:
 	.loc 1 568 0
-	@ Function supports interworking.
 	@ args = 4, pretend = 8, frame = 16
 	@ frame_needed = 0, uses_anonymous_args = 1
 	stmfd	sp!, {r2, r3}
@@ -259,8 +238,7 @@ _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz:
 	ldr	r1, [sp, #0]
 	ldr	r2, [sp, #24]
 	ldr	r3, [sp, #8]
-	mov	lr, pc
-	bx	ip
+	blx	ip
 	mov	r3, r0
 	str	r3, [sp, #12]
 	.loc 1 574 0
@@ -282,7 +260,6 @@ _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz:
 _ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_:
 .LFB29:
 	.loc 1 589 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -301,13 +278,11 @@ _ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_:
 	ldr	r1, [sp, #8]
 	ldr	r2, [sp, #4]
 	ldr	r3, [sp, #0]
-	mov	lr, pc
-	bx	ip
+	blx	ip
 	mov	r3, r0
 	mov	r0, r3
 	add	sp, sp, #20
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE29:
 	.size	_ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_, .-_ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
 	.section	.text._ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz,"axG",%progbits,_ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz,comdat
@@ -318,7 +293,6 @@ _ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_:
 _ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz:
 .LFB45:
 	.loc 1 622 0
-	@ Function supports interworking.
 	@ args = 4, pretend = 8, frame = 16
 	@ frame_needed = 0, uses_anonymous_args = 1
 	stmfd	sp!, {r2, r3}
@@ -340,8 +314,7 @@ _ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz:
 	ldr	r1, [sp, #0]
 	ldr	r2, [sp, #24]
 	ldr	r3, [sp, #8]
-	mov	lr, pc
-	bx	ip
+	blx	ip
 	mov	r3, r0
 	str	r3, [sp, #12]
 	ldr	r3, [sp, #12]
@@ -361,7 +334,6 @@ _ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz:
 _ZN7_JavaVM6GetEnvEPPvi:
 .LFB232:
 	.loc 1 1061 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -378,13 +350,11 @@ _ZN7_JavaVM6GetEnvEPPvi:
 	ldr	r0, [sp, #12]
 	ldr	r1, [sp, #8]
 	ldr	r2, [sp, #4]
-	mov	lr, pc
-	bx	r3
+	blx	r3
 	mov	r3, r0
 	mov	r0, r3
 	add	sp, sp, #20
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE232:
 	.size	_ZN7_JavaVM6GetEnvEPPvi, .-_ZN7_JavaVM6GetEnvEPPvi
 	.section	.text._ZL15s3eEdkJNIGetEnvv,"ax",%progbits
@@ -394,7 +364,6 @@ _ZL15s3eEdkJNIGetEnvv:
 .LFB234:
 	.file 2 "../../../s3e/edk/h/s3eEdk_android.h"
 	.loc 2 46 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -413,8 +382,7 @@ _ZL15s3eEdkJNIGetEnvv:
 	mov	r3, sp
 	ldr	r0, [sp, #4]
 	mov	r1, r3
-	mov	r2, #65536
-	add	r2, r2, #2
+	ldr	r2, .L25
 	bl	_ZN7_JavaVM6GetEnvEPPvi(PLT)
 	.loc 2 50 0
 	ldr	r3, [sp, #0]
@@ -422,8 +390,11 @@ _ZL15s3eEdkJNIGetEnvv:
 	.loc 2 51 0
 	mov	r0, r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
+.L26:
+	.align	2
+.L25:
+	.word	65538
 .LFE234:
 	.size	_ZL15s3eEdkJNIGetEnvv, .-_ZL15s3eEdkJNIGetEnvv
 	.section	.text._ZL27s3eEdkAndroidFindClass_realPKc,"ax",%progbits
@@ -432,7 +403,6 @@ _ZL15s3eEdkJNIGetEnvv:
 _ZL27s3eEdkAndroidFindClass_realPKc:
 .LFB235:
 	.loc 2 58 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 24
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -454,7 +424,7 @@ _ZL27s3eEdkAndroidFindClass_realPKc:
 	.loc 2 61 0
 	ldr	r3, [sp, #12]
 	cmp	r3, #0
-	bne	.L26
+	bne	.L28
 .LBB6:
 	.loc 2 63 0
 	ldr	r0, [sp, #8]
@@ -464,18 +434,18 @@ _ZL27s3eEdkAndroidFindClass_realPKc:
 	.loc 2 64 0
 	ldr	r3, [sp, #20]
 	cmp	r3, #0
-	beq	.L27
+	beq	.L29
 	.loc 2 67 0
 	ldr	r0, [sp, #8]
 	bl	_ZN7_JNIEnv17ExceptionDescribeEv(PLT)
 	.loc 2 69 0
 	ldr	r0, [sp, #8]
 	bl	_ZN7_JNIEnv14ExceptionClearEv(PLT)
-.L27:
+.L29:
 	.loc 2 71 0
 	mov	r3, #0
-	b	.L28
-.L26:
+	b	.L30
+.L28:
 .LBE6:
 	.loc 2 76 0
 	ldr	r3, [sp, #12]
@@ -491,13 +461,12 @@ _ZL27s3eEdkAndroidFindClass_realPKc:
 	bl	_ZN7_JNIEnv14DeleteLocalRefEP8_jobject(PLT)
 	.loc 2 78 0
 	ldr	r3, [sp, #16]
-.L28:
+.L30:
 .LBE5:
 	.loc 2 79 0
 	mov	r0, r3
 	add	sp, sp, #28
-	ldr	lr, [sp], #4
-	bx	lr
+	ldmfd	sp!, {pc}
 .LFE235:
 	.size	_ZL27s3eEdkAndroidFindClass_realPKc, .-_ZL27s3eEdkAndroidFindClass_realPKc
 	.section	.text._ZL22s3eEdkAndroidFindClassPKc,"ax",%progbits
@@ -506,7 +475,6 @@ _ZL27s3eEdkAndroidFindClass_realPKc:
 _ZL22s3eEdkAndroidFindClassPKc:
 .LFB236:
 	.loc 2 94 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -515,7 +483,7 @@ _ZL22s3eEdkAndroidFindClassPKc:
 .LCFI29:
 	str	r0, [sp, #4]
 	.loc 2 95 0
-	ldr	r3, .L32
+	ldr	r3, .L34
 .LPIC0:
 	add	r3, pc, r3
 	mov	r0, r3
@@ -526,11 +494,10 @@ _ZL22s3eEdkAndroidFindClassPKc:
 	.loc 2 96 0
 	mov	r0, r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
-.L33:
+	ldmfd	sp!, {pc}
+.L35:
 	.align	2
-.L32:
+.L34:
 	.word	_ZL27s3eEdkAndroidFindClass_realPKc-(.LPIC0+8)
 .LFE236:
 	.size	_ZL22s3eEdkAndroidFindClassPKc, .-_ZL22s3eEdkAndroidFindClassPKc
@@ -570,9 +537,8 @@ _ZL22s3eEdkAndroidFindClassPKc:
 	.type	_Z21startappInit_platformv, %function
 _Z21startappInit_platformv:
 .LFB270:
-	.file 3 "C:\\Marmalade\\6.1\\extensions\\startapp\\source\\android\\startapp_platform.cpp"
+	.file 3 "C:\\Marmalade\\6.2\\extensions\\startapp\\source\\android\\startapp_platform.cpp"
 	.loc 3 20 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 24
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -591,7 +557,7 @@ _Z21startappInit_platformv:
 	mov	r3, #0
 	str	r3, [sp, #12]
 	.loc 3 27 0
-	ldr	r3, .L48
+	ldr	r3, .L50
 .LPIC1:
 	add	r3, pc, r3
 	mov	r0, r3
@@ -601,16 +567,16 @@ _Z21startappInit_platformv:
 	.loc 3 28 0
 	ldr	r3, [sp, #16]
 	cmp	r3, #0
-	beq	.L44
-.L35:
+	beq	.L46
+.L37:
 	.loc 3 32 0
 	ldr	r0, [sp, #4]
 	ldr	r1, [sp, #16]
-	ldr	r3, .L48+4
+	ldr	r3, .L50+4
 .LPIC2:
 	add	r3, pc, r3
 	mov	r2, r3
-	ldr	r3, .L48+8
+	ldr	r3, .L50+8
 .LPIC3:
 	add	r3, pc, r3
 	bl	_ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_(PLT)
@@ -619,8 +585,8 @@ _Z21startappInit_platformv:
 	.loc 3 33 0
 	ldr	r3, [sp, #12]
 	cmp	r3, #0
-	beq	.L45
-.L37:
+	beq	.L47
+.L39:
 	.loc 3 37 0
 	ldr	r0, [sp, #4]
 	ldr	r1, [sp, #16]
@@ -631,34 +597,34 @@ _Z21startappInit_platformv:
 	.loc 3 38 0
 	ldr	r3, [sp, #8]
 	cmp	r3, #0
-	beq	.L46
-.L38:
+	beq	.L48
+.L40:
 	.loc 3 42 0
 	ldr	r0, [sp, #4]
 	ldr	r1, [sp, #16]
-	ldr	r3, .L48+12
+	ldr	r3, .L50+12
 .LPIC4:
 	add	r3, pc, r3
 	mov	r2, r3
-	ldr	r3, .L48+16
+	ldr	r3, .L50+16
 .LPIC5:
 	add	r3, pc, r3
 	bl	_ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_(PLT)
 	mov	r2, r0
-	ldr	r3, .L48+20
+	ldr	r3, .L50+20
 .LPIC6:
 	add	r3, pc, r3
 	str	r2, [r3, #0]
 	.loc 3 43 0
-	ldr	r3, .L48+24
+	ldr	r3, .L50+24
 .LPIC7:
 	add	r3, pc, r3
 	ldr	r3, [r3, #0]
 	cmp	r3, #0
-	beq	.L47
-.L39:
+	beq	.L49
+.L41:
 	.loc 3 48 0
-	ldr	r3, .L48+28
+	ldr	r3, .L50+28
 .LPIC8:
 	add	r3, pc, r3
 	mov	r0, r3
@@ -670,24 +636,24 @@ _Z21startappInit_platformv:
 	movne	r3, #1
 	and	r3, r3, #255
 	cmp	r3, #0
-	beq	.L40
-	ldr	r3, .L48+32
+	beq	.L42
+	ldr	r3, .L50+32
 .LPIC9:
 	add	r3, pc, r3
 	mov	r0, r3
 	bl	IwDebugTraceSetTraceChannel(PLT)
-	ldr	r3, .L48+36
+	ldr	r3, .L50+36
 .LPIC10:
 	add	r3, pc, r3
 	mov	r0, r3
 	bl	IwDebugTraceLinePrintf(PLT)
-.L40:
+.L42:
 	.loc 3 49 0
 	ldr	r0, [sp, #4]
 	ldr	r1, [sp, #8]
 	bl	_ZN7_JNIEnv12NewGlobalRefEP8_jobject(PLT)
 	mov	r2, r0
-	ldr	r3, .L48+40
+	ldr	r3, .L50+40
 .LPIC11:
 	add	r3, pc, r3
 	str	r2, [r3, #0]
@@ -702,23 +668,23 @@ _Z21startappInit_platformv:
 	bl	_ZN7_JNIEnv15DeleteGlobalRefEP8_jobject(PLT)
 	.loc 3 54 0
 	mov	r3, #0
-	b	.L41
-.L44:
+	b	.L43
+.L46:
 	.loc 3 29 0
 	mov	r0, r0	@ nop
-	b	.L36
-.L45:
+	b	.L38
+.L47:
 	.loc 3 34 0
 	mov	r0, r0	@ nop
-	b	.L36
-.L46:
+	b	.L38
+.L48:
 	.loc 3 39 0
 	mov	r0, r0	@ nop
-	b	.L36
-.L47:
+	b	.L38
+.L49:
 	.loc 3 44 0
 	mov	r0, r0	@ nop
-.L36:
+.L38:
 	.loc 3 57 0
 	ldr	r0, [sp, #4]
 	bl	_ZN7_JNIEnv17ExceptionOccurredEv(PLT)
@@ -727,7 +693,7 @@ _Z21startappInit_platformv:
 	.loc 3 58 0
 	ldr	r3, [sp, #20]
 	cmp	r3, #0
-	beq	.L42
+	beq	.L44
 	.loc 3 60 0
 	ldr	r0, [sp, #4]
 	bl	_ZN7_JNIEnv17ExceptionDescribeEv(PLT)
@@ -735,7 +701,7 @@ _Z21startappInit_platformv:
 	ldr	r0, [sp, #4]
 	bl	_ZN7_JNIEnv14ExceptionClearEv(PLT)
 	.loc 3 62 0
-	ldr	r3, .L48+44
+	ldr	r3, .L50+44
 .LPIC12:
 	add	r3, pc, r3
 	mov	r0, r3
@@ -747,30 +713,29 @@ _Z21startappInit_platformv:
 	movne	r3, #1
 	and	r3, r3, #255
 	cmp	r3, #0
-	beq	.L42
-	ldr	r3, .L48+48
+	beq	.L44
+	ldr	r3, .L50+48
 .LPIC13:
 	add	r3, pc, r3
 	mov	r0, r3
 	bl	IwDebugTraceSetTraceChannel(PLT)
-	ldr	r3, .L48+52
+	ldr	r3, .L50+52
 .LPIC14:
 	add	r3, pc, r3
 	mov	r0, r3
 	bl	IwDebugTraceLinePrintf(PLT)
-.L42:
+.L44:
 	.loc 3 64 0
 	mov	r3, #1
-.L41:
+.L43:
 .LBE7:
 	.loc 3 66 0
 	mov	r0, r3
 	add	sp, sp, #28
-	ldr	lr, [sp], #4
-	bx	lr
-.L49:
+	ldmfd	sp!, {pc}
+.L51:
 	.align	2
-.L48:
+.L50:
 	.word	.LC0-(.LPIC1+8)
 	.word	.LC1-(.LPIC2+8)
 	.word	.LC2-(.LPIC3+8)
@@ -795,7 +760,6 @@ _Z21startappInit_platformv:
 _Z26startappTerminate_platformv:
 .LFB271:
 	.loc 3 69 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
@@ -811,7 +775,6 @@ _Z26startappTerminate_platformv:
 _Z16initSDK_platformv:
 .LFB272:
 	.loc 3 74 0
-	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	str	lr, [sp, #-4]!
@@ -824,11 +787,11 @@ _Z16initSDK_platformv:
 	mov	r3, r0
 	str	r3, [sp, #4]
 	.loc 3 76 0
-	ldr	r3, .L54
+	ldr	r3, .L56
 .LPIC15:
 	add	r3, pc, r3
 	ldr	r2, [r3, #0]
-	ldr	r3, .L54+4
+	ldr	r3, .L56+4
 .LPIC16:
 	add	r3, pc, r3
 	ldr	r3, [r3, #0]
@@ -841,11 +804,10 @@ _Z16initSDK_platformv:
 	.loc 3 77 0
 	mov	r0, r3
 	add	sp, sp, #12
-	ldr	lr, [sp], #4
-	bx	lr
-.L55:
+	ldmfd	sp!, {pc}
+.L57:
 	.align	2
-.L54:
+.L56:
 	.word	_ZL5g_Obj-(.LPIC15+8)
 	.word	_ZL9g_initSDK-(.LPIC16+8)
 .LFE272:
@@ -11824,7 +11786,7 @@ _Z16initSDK_platformv:
 	.4byte	.LASF573
 	.byte	0x3
 	.byte	0x38
-	.4byte	.L36
+	.4byte	.L38
 	.uleb128 0x25
 	.4byte	.LBB7
 	.4byte	.LBE7
@@ -12785,7 +12747,7 @@ _Z16initSDK_platformv:
 .LASF25:
 	.ascii	"_jstring\000"
 .LASF570:
-	.ascii	"c:\\\\Marmalade\\\\6.1\\\\extensions\\\\startapp\\\\"
+	.ascii	"c:\\\\Marmalade\\\\6.2\\\\extensions\\\\startapp\\\\"
 	.ascii	"build_startapp_android_linux_scons_arm\000"
 .LASF479:
 	.ascii	"_ZN7_JNIEnv13NewShortArrayEi\000"
@@ -12942,9 +12904,6 @@ _Z16initSDK_platformv:
 	.ascii	"DP6jvalue\000"
 .LASF248:
 	.ascii	"NewIntArray\000"
-.LASF569:
-	.ascii	"C:\\Marmalade\\6.1\\extensions\\startapp\\source\\a"
-	.ascii	"ndroid\\startapp_platform.cpp\000"
 .LASF536:
 	.ascii	"DestroyJavaVM\000"
 .LASF463:
@@ -12988,9 +12947,9 @@ _Z16initSDK_platformv:
 	.ascii	"\000"
 .LASF117:
 	.ascii	"CallShortMethodA\000"
-.LASF475:
-	.ascii	"_ZN7_JNIEnv21SetObjectArrayElementEP13_jobjectArray"
-	.ascii	"iP8_jobject\000"
+.LASF569:
+	.ascii	"C:\\Marmalade\\6.2\\extensions\\startapp\\source\\a"
+	.ascii	"ndroid\\startapp_platform.cpp\000"
 .LASF53:
 	.ascii	"jmethodID\000"
 .LASF235:
@@ -13823,6 +13782,9 @@ _Z16initSDK_platformv:
 	.ascii	"yiiPKh\000"
 .LASF197:
 	.ascii	"CallStaticShortMethodA\000"
+.LASF475:
+	.ascii	"_ZN7_JNIEnv21SetObjectArrayElementEP13_jobjectArray"
+	.ascii	"iP8_jobject\000"
 .LASF402:
 	.ascii	"_ZN7_JNIEnv12GetLongFieldEP8_jobjectP9_jfieldID\000"
 .LASF138:
