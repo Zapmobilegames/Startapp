@@ -3,4 +3,6 @@
 functions:
 
 
-s3eResult initSDK() S3E_RESULT_ERROR run_on_os_thread
+s3eResult initSDK(const char* DEV_ID, const char* APP_ID) S3E_RESULT_ERROR run_on_os_thread
+s3eResult Show_Ad() S3E_RESULT_ERROR run_on_os_thread
+s3eResult Show_SearchBox(bool show) S3E_RESULT_ERROR run_on_os_thread

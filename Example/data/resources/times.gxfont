@@ -1,0 +1,12 @@
+//Temp file created by AS Font Builder (User: cdunst At: 03/02/11 14:24:44)
+//Command Line:
+//:  -fontdesc "0;-19;0;0;0;400;0;0;0;0;3;2;1;18;Times New Roman" 0 4 0  -pad 0 0 
+//:  -col #FFFFFF -shadow 0 -spacing 4 -force16 0
+
+CIwGxFont
+{
+	utf8 1
+	image times.tga
+	charmap " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ"
+
+}

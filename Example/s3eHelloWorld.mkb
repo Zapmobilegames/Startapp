@@ -2,6 +2,17 @@
 files
 {
     s3eHelloWorld.cpp
+
+	[Data]
+    (data)
+    IwUIBasicButtonEvents.group
+    IwUIBasicButtonEvents.ui
+}
+
+assets
+{
+    (data-ram/data-gles1, data)
+    iwuibasicbuttonevents.group.bin
 }
 
 options
@@ -12,15 +23,17 @@ options
 deployments
 {
     splashscreen="../resources/splashscreens/"
-
 	android-manifest=AndroidManifest.xml
-	android-external-jars=StartAppSearchSDK-1.0.19.jar
+	android-external-jars='StartAppCommon-1.0.0.jar,StartAppInApp-2.0.jar,StartAppSearchBox-1.0.0.jar'
 }
 
 subprojects
 {
+	iwui
+	../ExamplesCore
 	startapp
 }
+
 #### AUTO GENERATED deployment settings from DeployTool.exe. Do not edit below this line ####
 deployments
 {

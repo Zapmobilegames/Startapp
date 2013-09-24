@@ -1,0 +1,21 @@
+ResGroupResources:
+	CIwGxFont (0xa68776be)
+		"times" (0x106d8b87)
+		Size: 26313
+	ResList 'CIwGxFont' pos:52 size:26323
+
+	CIwTexture (0x3521f539)
+		"button_up" (0x7be69d85)
+		Size: 4772
+	CIwTexture (0x3521f539)
+		"button_down" (0xffacbd8)
+		Size: 4772
+	ResList 'CIwTexture' pos:26375 size:9554
+
+	CIwUIButton (0xc64b7cc2)
+		"EventButton" (0xadc21e03)
+		Size: 313
+	ResList 'CIwUIButton' pos:35929 size:323
+
+ResGroupResources: Wrote 36204 bytes to CIwResGroup "IwUIBasicButtonEvents"
+

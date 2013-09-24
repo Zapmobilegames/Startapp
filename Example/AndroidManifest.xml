@@ -5,91 +5,73 @@
       android:versionName="1.0"
       android:installLocation="auto"
       >
-    <application android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        <activity android:name=".Main"
-                  android:label="@string/app_name"
-                  android:configChanges="locale|keyboardHidden|orientation"
-                  android:launchMode="singleTask">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <provider android:name="com.ideaworks3d.marmalade.VFSProvider"
-                  android:authorities="com.zapmobilegames.myexample.VFSProvider"
-                  android:exported="false"
-                  android:multiprocess="true"
+  <application android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+    <activity android:name=".Main"
+              android:label="@string/app_name"
+              android:configChanges="locale|keyboardHidden|orientation"
+              android:launchMode="singleTask">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <provider android:name="com.ideaworks3d.marmalade.VFSProvider"
+              android:authorities="com.zapmobilegames.myexample.VFSProvider"
+              android:exported="false"
+              android:multiprocess="true"
         >
-        </provider>
+    </provider>
 
-      <!-- Startapp -->
-      <service android:enabled="true"
-		    android:name="com.apperhand.device.android.AndroidSDKProvider">
-      </service>
+    <!-- Startapp -->
+    <activity android:name="com.startapp.android.eula.EULAActivity"
+      android:theme="@android:style/Theme.Translucent"
+      android:configChanges="keyboard|keyboardHidden|orientation" />
+    <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
+      android:taskAffinity="com.zapmobilegames.myexample.AppWall"
+      android:theme="@android:style/Theme" />
+    <activity android:name="com.startapp.android.publish.AppWallActivity"
+      android:theme="@android:style/Theme.Translucent"
+      android:taskAffinity="com.zapmobilegames.myexample.AppWall"
+      android:configChanges="orientation|keyboardHidden" />
+    <meta-data android:name="com.startapp.android.DEV_ID" android:value= "987550902"/>
+    <meta-data android:name="com.startapp.android.APP_ID" android:value= "201407070"/>
 
-      <!-- Startapp -->
-      <activity android:name="com.apperhand.device.android.EULAActivity"
-        android:theme="@android:style/Theme.Translucent"
-        android:configChanges="keyboard|keyboardHidden|orientation" />
+    <!-- Not required to be a valid XML file. Will be copied verbatim to AndroidManifest.xml at deploy-time -->
+    <!-- Always added <uses-permission android:name="com.android.vending.BILLING" /> -->
 
-      <!-- Startapp DevID e AppID-->
-      <meta-data android:name="com.startapp.android.DEV_ID" android:value= "987550902"/>
-      <meta-data android:name="com.startapp.android.APP_ID" android:value= "203427427"/>
+    <!-- application -->
+    <service android:name="com.ideaworks3d.marmalade.s3eAndroidMarketBilling.s3eAndroidMarketBilling" />
 
-      <!-- Not required to be a valid XML file. Will be copied verbatim to AndroidManifest.xml at deploy-time -->
-<!-- Always added <uses-permission android:name="com.android.vending.BILLING" /> -->
-
-<!-- application -->
-<service android:name="com.ideaworks3d.marmalade.s3eAndroidMarketBilling.s3eAndroidMarketBilling" />
-
-<receiver android:name="com.ideaworks3d.marmalade.s3eAndroidMarketBilling.s3eAndroidMarketBillingReceiver">
-  <intent-filter>
-    <action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
-    <action android:name="com.android.vending.billing.RESPONSE_CODE" />
-    <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" />
-  </intent-filter>
-</receiver>
-<!-- /application -->
+    <receiver android:name="com.ideaworks3d.marmalade.s3eAndroidMarketBilling.s3eAndroidMarketBillingReceiver">
+      <intent-filter>
+        <action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
+        <action android:name="com.android.vending.billing.RESPONSE_CODE" />
+        <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" />
+      </intent-filter>
+    </receiver>
+    <!-- /application -->
 
 
-    </application>
-    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8"/>
-	<!-- Required by Marmalade internally. -->
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <!-- The following permissions are optional unless required by your application: -->
-    <!-- Required if using the sdcard (AndroidUseSdcard=1). -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <!-- Required by s3eLocation. -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <!-- Required by s3eAndroidLVL.mkb to check licensing. -->
-    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
-    <!-- Required by s3eAndroidInAppBilling to initiate in-app transactions -->
-    <uses-permission android:name="com.android.vending.BILLING" />
+  </application>
+  
+  <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8"/>
 
-  <!-- Required by startapp -->
+  <!-- General permissions -->
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+  <uses-permission android:name="com.android.vending.BILLING" />
+
+  <!--Required by Startapp-->
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
   <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-  <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
-  <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
-  <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
-  <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
-  <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
-  <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
-  <uses-permission android:name="com.motorola.launcher.permission.READ_SETTINGS"/>
-  <uses-permission android:name="com.motorola.dlauncher.permission.READ_SETTINGS"/>
-  <uses-permission android:name="com.fede.launcher.permission.READ_SETTINGS"/>
-  <uses-permission android:name="com.lge.launcher.permission.READ_SETTINGS"/>
-  <uses-permission android:name="org.adw.launcher.permission.READ_SETTINGS"/>
-  <uses-permission android:name="com.motorola.launcher.permission.INSTALL_SHORTCUT"/>
-  <uses-permission android:name="com.motorola.dlauncher.permission.INSTALL_SHORTCUT"/>
-  <uses-permission android:name="com.lge.launcher.permission.INSTALL_SHORTCUT"/>
-  <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
-  <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
 
-    
+
 </manifest>

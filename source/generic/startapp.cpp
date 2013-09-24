@@ -23,7 +23,17 @@ void startappTerminate()
     startappTerminate_platform();
 }
 
-s3eResult initSDK()
+s3eResult initSDK(const char* DEV_ID, const char* APP_ID)
 {
-	return initSDK_platform();
+	return initSDK_platform(DEV_ID, APP_ID);
+}
+
+s3eResult Show_Ad()
+{
+	return Show_Ad_platform();
+}
+
+s3eResult Show_SearchBox(bool show)
+{
+	return Show_SearchBox_platform(show);
 }

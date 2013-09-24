@@ -1,0 +1,28 @@
+CIwUIButton
+{
+	name 			"EventButton"
+	pos         	{ 50, 50 }
+    size			{ 160 80}
+	sizeMax			{ 160 80}
+	sizeMin			{ 160 80}
+    font        	"times"
+	textColour  	{ 0,0,255 }
+    caption    		"Click Me!"
+	alignH 			"centre"
+	alignV 			"middle"
+	margin  		{ 0 0 }
+
+	buttonUp
+    {
+        drawableType "border"
+		texture "button_up"
+        border  { 12 12 }
+    }
+
+    buttonDown
+    {
+		drawableType "border"
+		texture "button_down"
+        border  { 12 12 }
+    }
+}

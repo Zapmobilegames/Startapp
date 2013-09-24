@@ -10,10 +10,19 @@
 
 #include "startapp.h"
 
+
+// For MIPs (and WP8) platform we do not have asm code for stack switching 
+// implemented. So we make LoaderCallStart call manually to set GlobalLock
+#if defined __mips || defined S3E_ANDROID_X86 || (defined(WINAPI_FAMILY) && (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP))
+#define LOADER_CALL
+#endif
+
 /**
  * Definitions for functions types passed to/from s3eExt interface
  */
-typedef  s3eResult(*initSDK_t)();
+typedef  s3eResult(*initSDK_t)(const char* DEV_ID, const char* APP_ID);
+typedef  s3eResult(*Show_Ad_t)();
+typedef  s3eResult(*Show_SearchBox_t)(bool show);
 
 /**
  * struct that gets filled in by startappRegister
@@ -21,6 +30,8 @@ typedef  s3eResult(*initSDK_t)();
 typedef struct startappFuncs
 {
     initSDK_t m_initSDK;
+    Show_Ad_t m_Show_Ad;
+    Show_SearchBox_t m_Show_SearchBox;
 } startappFuncs;
 
 static startappFuncs g_Ext;
@@ -66,22 +77,60 @@ s3eBool startappAvailable()
     return g_GotExt ? S3E_TRUE : S3E_FALSE;
 }
 
-s3eResult initSDK()
+s3eResult initSDK(const char* DEV_ID, const char* APP_ID)
 {
     IwTrace(STARTAPP_VERBOSE, ("calling startapp[0] func: initSDK"));
 
     if (!_extLoad())
         return S3E_RESULT_ERROR;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
-    s3eResult ret = g_Ext.m_initSDK();
+    s3eResult ret = g_Ext.m_initSDK(DEV_ID, APP_ID);
 
-#ifdef __mips
+#ifdef LOADER_CALL
+    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+#endif
+
+    return ret;
+}
+
+s3eResult Show_Ad()
+{
+    IwTrace(STARTAPP_VERBOSE, ("calling startapp[1] func: Show_Ad"));
+
+    if (!_extLoad())
+        return S3E_RESULT_ERROR;
+
+#ifdef LOADER_CALL
+    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+#endif
+
+    s3eResult ret = g_Ext.m_Show_Ad();
+
+#ifdef LOADER_CALL
+    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+#endif
+
+    return ret;
+}
+
+s3eResult Show_SearchBox(bool show)
+{
+    IwTrace(STARTAPP_VERBOSE, ("calling startapp[2] func: Show_SearchBox"));
+
+    if (!_extLoad())
+        return S3E_RESULT_ERROR;
+
+#ifdef LOADER_CALL
+    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+#endif
+
+    s3eResult ret = g_Ext.m_Show_SearchBox(show);
+
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 

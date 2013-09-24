@@ -26,7 +26,11 @@ S3E_BEGIN_C_DECL
  */
 s3eBool startappAvailable();
 
-s3eResult initSDK();
+s3eResult initSDK(const char* DEV_ID, const char* APP_ID);
+
+s3eResult Show_Ad();
+
+s3eResult Show_SearchBox(bool show);
 
 S3E_END_C_DECL
 

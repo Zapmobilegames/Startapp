@@ -24,26 +24,42 @@ extern void startappTerminate();
 // code is oftern build standalone, outside the main loader build.
 #if defined I3D_OS_IPHONE || defined I3D_OS_OSX || defined I3D_OS_LINUX || defined I3D_OS_WINDOWS
 
-static s3eResult initSDK_wrap()
+static s3eResult initSDK_wrap(const char* DEV_ID, const char* APP_ID)
 {
     IwTrace(STARTAPP_VERBOSE, ("calling startapp func on main thread: initSDK"));
-    return (s3eResult)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)initSDK, 0);
+    return (s3eResult)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)initSDK, 2, DEV_ID, APP_ID);
+}
+
+static s3eResult Show_Ad_wrap()
+{
+    IwTrace(STARTAPP_VERBOSE, ("calling startapp func on main thread: Show_Ad"));
+    return (s3eResult)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)Show_Ad, 0);
+}
+
+static s3eResult Show_SearchBox_wrap(bool show)
+{
+    IwTrace(STARTAPP_VERBOSE, ("calling startapp func on main thread: Show_SearchBox"));
+    return (s3eResult)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)Show_SearchBox, 1, show);
 }
 
 #define initSDK initSDK_wrap
+#define Show_Ad Show_Ad_wrap
+#define Show_SearchBox Show_SearchBox_wrap
 
 #endif
 
 void startappRegisterExt()
 {
     /* fill in the function pointer struct for this extension */
-    void* funcPtrs[1];
+    void* funcPtrs[3];
     funcPtrs[0] = (void*)initSDK;
+    funcPtrs[1] = (void*)Show_Ad;
+    funcPtrs[2] = (void*)Show_SearchBox;
 
     /*
      * Flags that specify the extension's use of locking and stackswitching
      */
-    int flags[1] = { 0 };
+    int flags[3] = { 0 };
 
     /*
      * Register the extension

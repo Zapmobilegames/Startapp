@@ -1,0 +1,10 @@
+CIwResGroup
+{
+	name	IwUIBasicButtonEvents
+
+	resources/times.gxfont
+	resources/button_up.tga
+	resources/button_down.tga
+
+	IwUIBasicButtonEvents.ui
+}

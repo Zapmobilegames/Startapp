@@ -15,6 +15,8 @@
 
 static jobject g_Obj;
 static jmethodID g_initSDK;
+static jmethodID g_Show_Ad;
+static jmethodID g_Show_SearchBox;
 
 s3eResult startappInit_platform()
 {
@@ -39,8 +41,16 @@ s3eResult startappInit_platform()
         goto fail;
 
     // Get all the extension methods
-    g_initSDK = env->GetMethodID(cls, "initSDK", "()I");
+    g_initSDK = env->GetMethodID(cls, "initSDK", "(Ljava/lang/String;Ljava/lang/String;)I");
     if (!g_initSDK)
+        goto fail;
+
+    g_Show_Ad = env->GetMethodID(cls, "Show_Ad", "()I");
+    if (!g_Show_Ad)
+        goto fail;
+
+    g_Show_SearchBox = env->GetMethodID(cls, "Show_SearchBox", "(Z)I");
+    if (!g_Show_SearchBox)
         goto fail;
 
 
@@ -70,8 +80,22 @@ void startappTerminate_platform()
     // Add any platform-specific termination code here
 }
 
-s3eResult initSDK_platform()
+s3eResult initSDK_platform(const char* DEV_ID, const char* APP_ID)
 {
     JNIEnv* env = s3eEdkJNIGetEnv();
-    return (s3eResult)env->CallIntMethod(g_Obj, g_initSDK);
+    jstring DEV_ID_jstr = env->NewStringUTF(DEV_ID);
+    jstring APP_ID_jstr = env->NewStringUTF(APP_ID);
+    return (s3eResult)env->CallIntMethod(g_Obj, g_initSDK, DEV_ID_jstr, APP_ID_jstr);
+}
+
+s3eResult Show_Ad_platform()
+{
+    JNIEnv* env = s3eEdkJNIGetEnv();
+    return (s3eResult)env->CallIntMethod(g_Obj, g_Show_Ad);
+}
+
+s3eResult Show_SearchBox_platform(bool show)
+{
+    JNIEnv* env = s3eEdkJNIGetEnv();
+    return (s3eResult)env->CallIntMethod(g_Obj, g_Show_SearchBox, show);
 }
