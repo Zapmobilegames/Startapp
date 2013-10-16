@@ -8,7 +8,7 @@ You can ask for theirs SDK using this link (http://startapp.com/rf7dzh2) and you
 
 Download the jars and place it in your app folder.
 
-This is an extension for Marmalade of the Startapp SDK: StartApp_InApp_SearchBox_PostCall_SDK-1.0.3.
+This is an extension for Marmalade of the Startapp SDK: StartApp_InApp_SearchBox_PostCall_SDK-1.0.7.
 
 The extension is really simple. The only lines to be added in your Main.cpp, just before Game::Create() are:
 

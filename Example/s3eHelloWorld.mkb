@@ -24,7 +24,7 @@ deployments
 {
     splashscreen="../resources/splashscreens/"
 	android-manifest=AndroidManifest.xml
-	android-external-jars='StartAppCommon-1.0.0.jar,StartAppInApp-2.0.jar,StartAppSearchBox-1.0.0.jar'
+	android-external-jars='StartAppCommon-1.0.1.jar,StartAppInApp-2.0.3.jar,StartAppSearchBox-1.0.2.jar'
 }
 
 subprojects

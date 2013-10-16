@@ -1,6 +1,6 @@
 Archive member included because of file (symbol)
 
-C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
                               release\startapp_platform.os (s3eEdkThreadRunOnOS)
 
 Discarded input sections
@@ -26,15 +26,15 @@ Discarded input sections
                 0x00000000        0x0 release\startapp_register.os
  .note.GNU-stack
                 0x00000000        0x0 release\startapp_register.os
- .text          0x00000000        0x0 C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .bss           0x00000000        0x0 C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .text          0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .data          0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .bss           0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkThreadRunOnOSAsync
-                0x00000000        0x0 C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkErrorSetString
-                0x00000000        0x0 C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text          0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .data          0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .bss           0x00000000        0x0 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o
@@ -50,8 +50,8 @@ LOAD C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/li
 LOAD release\startapp_platform.os
 LOAD release\startapp.os
 LOAD release\startapp_register.os
-LOAD C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a
-LOAD C:\Marmalade\6.3\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+LOAD C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a
+LOAD C:\Marmalade\6.4\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
 LOAD C:\Program Files\Android\android-ndk-r8\platforms\android-9\arch-arm\usr\lib/liblog.so
 LOAD C:\Program Files\Android\android-ndk-r8\sources\cxx-stl\gnu-libstdc++\libs\armeabi\libgnustl_static.a
 LOAD c:/Program Files/Android/android-ndk-r8/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
@@ -191,7 +191,7 @@ LOAD C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/li
                 0x0000095c       0x90 release\startapp_register.os
                 0x0000095c                RegisterExt
  .text.s3eEdkThreadRunOnOS
-                0x000009ec       0x30 C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x000009ec       0x30 C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
                 0x000009ec                s3eEdkThreadRunOnOS
  *(.gnu.warning)
  *(.glue_7t)
@@ -354,7 +354,7 @@ LOAD C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/li
  .comment       0x00000000       0x12 release\startapp_platform.os
  .comment       0x00000012       0x12 release\startapp.os
  .comment       0x00000024       0x12 release\startapp_register.os
- .comment       0x00000036       0x12 C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .comment       0x00000036       0x12 C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
 
 .debug
  *(.debug)
@@ -422,7 +422,7 @@ LOAD C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/li
 /DISCARD/
  *(.note.GNU-stack)
  *(.gnu_debuglink)
-OUTPUT(C:\Marmalade\6.3\extensions\startapp\lib\android\libstartapp.so elf32-littlearm)
+OUTPUT(C:\Marmalade\6.4\extensions\startapp\lib\android\libstartapp.so elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x29
@@ -435,6 +435,6 @@ OUTPUT(C:\Marmalade\6.3\extensions\startapp\lib\android\libstartapp.so elf32-lit
  .ARM.attributes
                 0x0000006f       0x2b release\startapp_register.os
  .ARM.attributes
-                0x0000009a       0x2b C:\Marmalade\6.3\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x0000009a       0x2b C:\Marmalade\6.4\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .ARM.attributes
                 0x000000c5       0x17 C:/Program Files/Android/android-ndk-r8/platforms/android-9/arch-arm/usr/lib/crtend_so.o

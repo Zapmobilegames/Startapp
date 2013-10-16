@@ -10,9 +10,8 @@ files
 
 librarypath "$MARMALADE_ROOT/s3e/deploy/plugins/android/android.jar"
 librarypath "$MARMALADE_ROOT/s3e/loader/android/s3e_release.jar"
-# librarypath "$MARMALADE_ROOT/extensions/startapp/StartAppUnifiedSDK-3.0.4.jar"
-librarypath "$MARMALADE_ROOT/extensions/startapp/StartAppCommon-1.0.0.jar"
-librarypath "$MARMALADE_ROOT/extensions/startapp/StartAppInApp-2.0.jar"
-librarypath "$MARMALADE_ROOT/extensions/startapp/StartAppSearchBox-1.0.0.jar"
+librarypath "$MARMALADE_ROOT/extensions/startapp/StartAppCommon-1.0.1.jar"
+librarypath "$MARMALADE_ROOT/extensions/startapp/StartAppInApp-2.0.3.jar"
+librarypath "$MARMALADE_ROOT/extensions/startapp/StartAppSearchBox-1.0.2.jar"
 
 option output-name=lib/android/startapp.jar
